@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .warp{
+            widows: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu{
+            margin-top: 30px;
+            margin-left: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .birtext{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 54px;
+        }
+        .spn{
+            color:gray;
+        }
+        .home{
+            margin-right:10px;
+            cursor: pointer;
+            border:none;
+            background-color: white;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .skill{
+            margin-right:10px;
+            cursor: pointer;
+            border:none;
+            background-color: white;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .About{
+            margin-right:30px;
+            cursor: pointer;
+            border:none;
+            background-color: white;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .pricing{
+            margin-right:10px;
+            cursor: pointer;
+            border:none;
+            background-color: white;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .contacts{
+            cursor: pointer;
+            border:none;
+            background-color: white;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .lets{
+            width: 200px;
+            height: 60px;
+            cursor: pointer;
+            background-color: white;
+            border:2px solid black;
+            border-radius:5px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+        }
+        .lets:hover{
+            background-color: black;
+            color:white;
+        }
+        .start{
+            display: flex;
+            margin-top: 50px;
+            flex-direction:row;
+            justify-content: space-around;
+            margin-left:40px;
+        }
+
+        .part1{
+            margin-top: 50px;
+        }
+        .txt1{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 54px;
+            /* line-height: 80px; */
+        }
+        .coments{
+            margin-top:10px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            /* line-height: 36px; */
+            color: #8F95A5;
+        }
+        .gt_st{
+            width: 250px;
+            height:70px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            border-radius:5px;
+            border:none;
+            color: white;
+            margin-top:30px;
+            background-color: #263238;
+            cursor: pointer;
+        }
+
+        .big{
+            width: 450px;
+            height:450px;
+        }
+        .sskill{
+            display: flex;
+            margin-top:50px;
+            justify-content: center;
+        }
+
+        .other{
+            display: flex;
+            flex-direction: row;
+            margin-top: 50px;
+        }
+
+        .top{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height:37px;
+            /* margin-left:45%; */
+        }
+        .shr{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+            margin-left: 10px;
+        }
+        .lom{
+            margin-top:20px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            color:#8F95A5;
+            margin-left:10px;
+        }
+        .learn{
+            width:150px;
+            height:50px;
+            color:white;
+            background-color:#263238;
+            border: none;
+            border-radius:5px;
+            margin-top:20px;
+            margin-left:10px;
+        }
+        
+        .other1{
+            width: 300px;
+            height: 680px;
+            align-items: center;
+            background-color: #F5F5F5;
+            margin-right:10px;
+            border-radius: 10px;
+        }
+        .sheard{
+            width: 300px;
+            height: 300px;
+            margin-top:50px;
+        }
+        .other2l1{
+            display:flex;
+            flex-direction:row;
+        }
+        .other3{
+            width:300px;
+            background-color: #F5F5F5;
+            height: 440px;
+            border-radius:10px;
+            margin-right: 10px;
+        }
+        .other4{
+            width:350px;
+            background-color: #F5F5F5;
+            height: 440px;
+            border-radius:10px;
+            margin-right: 10px;
+        }
+
+        .type{
+            width:250px;
+            height: 250px;
+            margin-left: 50px;
+        }
+        .other2l2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width:660px;
+            height: 230px;
+            background-color: #F5F5F5;
+            border-radius:10px;
+            margin-top:10px;
+        }
+
+         .us{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 45px;
+            margin-bottom: 10px;
+         }
+         .abot{     
+             margin-top:50px;
+             display: flex;
+             justify-content: center;
+             flex-direction: row;
+         }
+         .nom{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            color: #8F95A5;
+            font-size: 19px;
+            margin-bottom:40px;
+         }
+         .bot{
+             display: flex;
+             flex-direction: row;
+             justify-content:space-around;
+         }
+         .bot1{
+             display:flex;
+             flex-direction: column;
+             align-items: center;
+         }
+         .bot2{
+           display: flex;
+           justify-content: center;
+           flex-direction:column;
+         }
+         .bob{
+             width: 350px;
+             margin-left:150px;
+            height: 350px;
+            }
+            .pup{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                color: #2A3246;
+                font-size: 48px;
+            }
+            .nam{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px; 
+                color: #8F95A5;            
+            }
+            .nam1{
+                margin-top:50px;
+                position:relative;
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px; 
+                color: #8F95A5;            
+            }
+            .pric{
+                display:flex;
+                margin-top:70px;
+                align-items: center;
+                justify-content: center;
+                flex-direction:column;
+            }
+            .hed{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 38px;
+                margin-bottom:40px;
+            }
+            .osn{
+                display: flex;
+                flex-direction: row;
+            }
+            .com{
+                width: 220px;
+                height: 220px;
+                margin-bottom: 5px;
+            }
+            .com2{
+                width:250px;
+                height: 230px;
+            }
+            .cam{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 25px;
+                color: #263238;
+                margin-bottom: 10px;
+            }
+            .rom{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                color: #8F95A5;
+            }
+            .com1{
+                height: 230px;
+            }
+            .osn1{
+                margin-right:50px;
+            }
+            .norm{
+               display:flex;
+               flex-direction: row;
+               justify-content:space-around;
+               align-items: center;
+               width:150px;
+               height:30px;
+               margin-top:20px;
+               background-color:#eeeeee;
+            }
+            .one{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                color: #263238;
+            }
+            .two{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                color: #546269;
+            }
+            .norm2{
+               display:flex;
+               flex-direction: row;
+               justify-content:space-around;
+               align-items: center;
+               width:150px;
+               height:30px;
+               margin-top:30px;
+               background-color:#eeeeee;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="wrap" id="wrap">
+        <div class="menu" id="menu">
+             <h1 class="birtext" id="birtext">Brit<span class="spn">lex</span></h1>
+            <div class="buttons" id="buttons">
+                <button class="home" id="home">
+                    Home
+                </button>
+                <button class="skill" id="skill">
+                    Skills
+                </button>
+                <button class="About" id="about">
+                    About Us
+                </button>
+                <button class="pricing" id="pricing">
+                    Pricing
+                </button>
+                <button class="contacts" id="contacts">
+                    Contacts
+                </button>
+          
+            </div>
+            <div class="ls_btn" id="ls_btn">
+                <button class="lets" id="lets">Let's Talk</button>
+            </div>
+        </div>
+        <div class="start" id="start">
+            <div class="part1" id="part1">
+                <h1 class="txt1">
+                    Learn <br>
+                    Any Foreign <br>
+                    Language
+                </h1>
+                <p class="coments" id="coments">
+                    With our teachers who write a program for <br>
+                    each student, you will be able to make your <br>
+                    first sketch after the first lesson.
+                </p>
+                <button class="gt_st">
+                    Get Started
+                </button>
+            </div>
+                <div class="patr2" id="part2">
+                    <img src="img/Learning languages-bro 1.png" alt="learn" class="big">
+                </div>
+        </div>
+        <div class="top" id="top">
+            <h1 class="top1">
+                Skills
+            </h1>
+        </div>
+        <div class="sskill" id="sskill">
+                <div class="other1" id="other1">
+                    <img src="img/Shared goals-bro 1.png" alt="---" class="sheard">
+                    <h3 class="shr" id="shr">
+                        Speaking
+                    </h3>
+                    <p class="lom" id="lom">
+                        Improve your English skills and confidence. <br>
+                        Live classes and interactive lessons online. <br>
+                        20% extra free for a limited time only <br>
+                        <br>
+                        Learn English online and improve your  <br>
+                        skills through our high-quality courses <br>
+                        and resources – all designed for adult <br>
+                        language learners.
+                    </p>
+                    <button class="learn" id="learn">
+                        Learn more
+                    </button>
+                </div>
+                <div class="other2" id="other2">
+                    <div class="other2l1" id="-_-">
+                        <div class="other3" id="other3">
+                            <img src="img/Typewriter-bro 1.png" alt="tp" class="type">
+                            <h3 class="shr">Writing</h3>
+                            <p class="lom" id="lom">
+                                One of the most important and extensive <br>
+                                areas of natural science, the science that <br>
+                                studies substances, also their composition 
+                            </p>
+                            <button class="learn" id="learn">
+                                Learn more
+                            </button>
+                        </div>
+                        <div class="other4" id="other4">
+                            <img src="img/House bookshelves-bro 1.png" alt="hose" class="man">
+                            <h3 class="shr">Reading</h3>
+                            <p class="lom" id="lom">
+                                perception and response actions of the user <br>
+                                resulting from the use and/or upcoming use <br>
+                                of the product, system or service
+                            </p>
+                            <button class="learn" id="learn">
+                                Learn more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="other2l2" id="_-_">
+                        <div class="pos1" id="pos1">
+                            <h3 class="shr">Listening</h3>
+                            <p class="lom" id="lom">
+                                Here you can find activities to practise <br>
+                                your listening skills. Listening will help you <br>
+                                to improve your understanding 
+                            </p>
+                            <button class="learn" id="learn">
+                                Learn more
+                            </button>
+                        </div>
+                        <div class="pos2" id="pos2">
+                            <img src="img/Podcast audience-bro 1.png" alt="pod" class="pod">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="abot" id="abot">
+            <div class="lop1" id="lop1">
+             <h2 class="us" id="us">
+                 About US
+             </h2>
+             <p class="nom" id="nom">
+                The model offers a framework for discussing problems related  <br>
+                to the user's experience, as well as possible ways and means of <br>
+                solving them. Application development begins at the top level <br>
+                (strategy), where the future software product is described quite <br>
+                abstractly from the point of view of the expectations of both <br>
+                users and the customer.
+             </p>
+             <div class="bot" id="bot">
+                 <div class="bot1" id="bot1">
+                     <h4 class="pup" id="pup">800</h4>
+                     <p class="nam" id="nam">Pupils</p>
+                 </div>
+                 <div class="bot1" id="bot1">
+                     <h4 class="pup" id="pup">18</h4>
+                     <p class="nam" id="nam">Teachers</p>
+                 </div>
+                 <div class="bot2" id="bot2"></div>
+                     <h4 class="pup" id="pup">6</h4>
+                     <p class="nam1" id="nam">Foreign languages</p>
+                 </div>
+             </div>
+             <div class="lop2" id="lop2">
+                <img src="Business-competition.png" alt="bob" class="bob" id="bob">
+                </div>
+            </div>
+        </div>
+        <div class="pric" id="pric">
+            <div class="hed" id="hed"><h2>Pricing</h2></div>
+            <div class="osn" id="osn">
+                <div class="osn1" id="osn1">
+                    <img src="Online.png" alt="online" class="com" id="com">
+                    <h4 class="cam" id="cam">Self-study online course</h4>
+                    <p class="rom" id="rom">Start learning English online in live classes <br>
+                        with qualified EC teachers and students <br>
+                        from all over the world.</p>
+                    <div class="norm" id="norm">
+                        <p class="one" id="one"> £5.99</p>
+                        <p class="two" id="two"> per month</p>
+                    </div>
+                </div>
+                <div class="osn1" id="osn1">
+                    <img src="Lesson.png" alt="lesson" class="com1" id="com1">
+                    <h4 class="cam" id="cam">Live online classes</h4>
+                    <p class="rom" id="rom">Interactive group classes with expert <br>
+                        teachers. Free 7-day trial</p>
+                        <div class="norm2" id="norm2">
+                            <div class="one" id="one1"> £12.99</div>
+                            <div class="two" id="two1"> per month</div>
+                        </div>
+                </div>
+                <div class="osn2" id="osn1">
+                    <img src="Webinar.png" alt="Webinar" class="com2" id="webir">
+                    <h4 class="cam" id="cam">Personal Tuition</h4>
+                    <p class="rom" id="rom">
+                        Online one-to-one English tutoring – enjoy <br>
+                        our first session for only $1
+                    </p>
+                    <div class="norm2" id="norm2">
+                        <div class="one" id="one2"> £20.99</div>
+                        <div class="two" id="two2"> per month</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script></script>
+</body>
+</html>
